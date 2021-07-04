@@ -31,3 +31,14 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### Dataset
+we use owid-covid-data.csv as our dataset. The csv file is located in public folder.
+
+### Insert data into database
+### `MySQL`
+![image](https://user-images.githubusercontent.com/79630970/124370364-68287e00-dca9-11eb-8a00-b767e4eb7e63.png)
+
+### `MongoDB`
+![image](https://user-images.githubusercontent.com/79630970/124370373-78d8f400-dca9-11eb-8423-2c137978256c.png)
+
