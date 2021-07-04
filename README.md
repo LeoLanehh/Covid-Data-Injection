@@ -32,6 +32,19 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### User Interface
+### `home page`
+![image](https://user-images.githubusercontent.com/79630970/124386960-68f3fb00-dd0f-11eb-935d-66e398c78f0e.png)
+
+### `sign in page`
+![image](https://user-images.githubusercontent.com/79630970/124386987-7c9f6180-dd0f-11eb-9fe0-508a79dc32a5.png)
+
+### `sign up page`
+![image](https://user-images.githubusercontent.com/79630970/124387003-8923ba00-dd0f-11eb-815c-b3485318835a.png)
+
+### `dashboard page`
+![image](https://user-images.githubusercontent.com/79630970/124387030-99d43000-dd0f-11eb-9dba-904e2d781898.png)
+
 ### Dataset
 we use owid-covid-data.csv as our dataset. The csv file is located in public folder.
 [covid-19-dataset website](https://github.com/owid/covid-19-data/tree/master/public/data)
