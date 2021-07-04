@@ -34,6 +34,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### Dataset
 we use owid-covid-data.csv as our dataset. The csv file is located in public folder.
+[covid-19-dataset website](https://github.com/owid/covid-19-data/tree/master/public/data)
 
 ### Insert data into database
 ### `MySQL`
