@@ -32,6 +32,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+<<<<<<< Updated upstream
 ### User Interface
 ### `home page`
 ![image](https://user-images.githubusercontent.com/79630970/124386960-68f3fb00-dd0f-11eb-935d-66e398c78f0e.png)
@@ -56,3 +57,13 @@ we use owid-covid-data.csv as our dataset. The csv file is located in public fol
 ### `MongoDB`
 ![image](https://user-images.githubusercontent.com/79630970/124370373-78d8f400-dca9-11eb-8423-2c137978256c.png)
 
+=======
+### Run server
+- nodemon server (package.json: "main": "./src/server.js",)
+>>>>>>> Stashed changes
+
+### Before prevention
+- In backend/server.js -> //app.use(mongoSanitize());(comment this line)
+
+### After prevention
+- In backend/server.js -> app.use(mongoSanitize());(uncomment this line)
