@@ -72,16 +72,23 @@ export default function Album() {
                             <Grid container spacing={2} justify="center">
                                 <Grid item>
                                     <Link href="/login">
-                                    <Button variant="contained" color="primary">
-                                        Sign In
-                                    </Button>
+                                        <Button variant="contained" color="primary">
+                                            Sign In
+                                        </Button>
                                     </Link>
                                 </Grid>
                                 <Grid item>
                                     <Link href="/register">
-                                    <Button variant="outlined" color="primary">
-                                        Sign Up
-                                    </Button>
+                                        <Button variant="outlined" color="primary">
+                                            Sign Up
+                                        </Button>
+                                    </Link>
+                                </Grid>
+                                <Grid item>
+                                    <Link href="/dashboard">
+                                        <Button variant="outlined" color="primary">
+                                            dashboard
+                                        </Button>
                                     </Link>
                                 </Grid>
                             </Grid>
