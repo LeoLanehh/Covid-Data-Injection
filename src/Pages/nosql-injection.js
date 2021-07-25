@@ -12,15 +12,17 @@ class nosqlinjection extends React.Component {
         // continent: { "$ne": "Asia" },
         // total_cases: { "$gte": 500 },
 
+
         // 2. find iso_code not equal "AFG", continent not equal "Asia", but total_cases between 100 to 1000
         // iso_code: { "$ne": "AFG" },
         // continent: { "$ne": "Asia" },
         // total_cases: { "$gte": 100, "$lte": 1000 },
+        // total_cases: { "$where": 'sleep(1000) || trun' },
 
         // 3. find iso_code = "SWZ", continent = "Africa", total_cases <= 5000
-        iso_code: "SWZ",
-        continent: "Africa",
-        total_cases: { "$lte": 5000 },
+        // iso_code: "SWZ",
+        // continent: "Africa",
+        // total_cases: { "$lte": 5000 },
 
         // 4. find iso_code = "AFG" or "CIV", continent = "Asia" or "Africa", total_cases between 10 - 500
         // iso_code: { "$in": ["AFG", "CIV"] },
@@ -28,9 +30,15 @@ class nosqlinjection extends React.Component {
         // total_cases: { "$gte": 10, "$lte": 500 },
 
 
-        // iso_code: "",
-        // continent: "",
-        // total_cases: "",
+        iso_code: "",
+        continent: "",
+        total_cases: "",
+
+
+
+        // total_cases: {
+        //     "$where": "sleep(5000)||True"
+        // },
 
         posts: [],
         Header: ["iso_code", "continent", "location", "date", "total_cases", "total_death"]
@@ -46,6 +54,7 @@ class nosqlinjection extends React.Component {
                 const data = response.data;
                 this.setState({ posts: data });
                 console.log('Data has been received!!!');
+
             })
             .catch(() => {
                 alert('Error retrieving data!!!');
@@ -80,11 +89,9 @@ class nosqlinjection extends React.Component {
         })
             .then(() => {
                 console.log('Data has been sent to the server');
-                // console.log(payload.iso_code);
-                // console.log(payload.continent);
-                //console.log('Data has been sent to the server');
                 this.resetUserInpts();
                 this.getCovid19data();
+
             })
             .catch(() => {
                 console.log('Internal server error');
@@ -119,67 +126,6 @@ class nosqlinjection extends React.Component {
 
             </div>
         );
-    };
-
-    displayCovid19data = (posts) => {
-        // posts.map((post) => {
-        //     const dataSource = [
-        //         {
-        //             prov: post.iso_code,
-        //             confirmed: post.continent,
-        //             cured: post.location,
-        //             dead: post.data,
-        //             t: post.total_cases
-
-        //         }
-        //     ]
-        // })
-
-        // const dataSource = [
-        //     { prov: '湖北省', confirmed: 54406, cured: 4793, dead: 1457, t: '2020-02-15 19:52:02' },
-        //     { prov: '广东省', confirmed: 1294, cured: 409, dead: 2, t: '2020-02-15 19:52:02' },
-        //     { prov: '河南省', confirmed: 1212, cured: 390, dead: 13, t: '2020-02-15 19:52:02' },
-        //     { prov: '浙江省', confirmed: 1162, cured: 428, dead: 0, t: '2020-02-15 19:52:02' },
-        //     { prov: '湖南省', confirmed: 1001, cured: 417, dead: 2, t: '2020-02-15 19:52:02' },
-        // ]
-
-        // const columns = [
-        //     { code: 'prov', name: '省份', width: 150 },
-        //     { code: 'confirmed', name: '确诊', width: 100, align: 'right' },
-        //     { code: 'cured', name: '治愈', width: 100, align: 'right' },
-        //     { code: 'dead', name: '死亡', width: 100, align: 'right' },
-        //     { code: 't', name: '最后更新时间', width: 180 },
-        // ]
-        // return <BaseTable dataSource={dataSource} columns={columns} />
-
-
-
-
-
-        // if (!posts.length) return null;
-        // return posts.map((post, index) => (
-        //     <div key={index} className="covid19data__display">
-        //         {/* <p>iso_code: {post.iso_code}</p>
-        //         <p>continent: {post.continent}</p>
-        //         <p>location: {post.location}</p>
-        //         <p>date: {post.date}</p>
-        //         <p>total_cases: {post.total_cases}</p>
-        //         <p>total_deaths: {post.total_deaths}</p>
-        //         <p>-----------------------------------------------</p> */}
-
-        //         <tr>
-        //             <td>{post.iso_code}</td>
-        //             <td>{post.continent}</td>
-        //             <td>{post.location}</td>
-        //             <td>{post.date}</td>
-        //             <td>{post.total_cases}</td>
-        //             <td>{post.total_deaths}</td>
-        //         </tr>
-
-
-
-        //     </div>
-        // ));
     };
 
 

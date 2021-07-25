@@ -7,40 +7,43 @@ var query = {};
 
 // var getiso_code = ""
 // var getcontinent = ""
-
-
 // Routes
 router.get('/', (req, res) => {
     console.log("router.get: ", query);
-    Covid19dataModel.find(query).limit(500)
+    var start = new Date().getTime();
+    Covid19dataModel.find(query)
+        .limit(1000)
         .then((data) => {
-            console.log('Data: ', data);
+            //console.log('Data: ', data);
             res.json(data);
         })
         .catch((error) => {
-            console.log("error!!!!!!!!!!!");
+
+            console.log("getting error!!!!!!!!!!!");
         });
+    var end = new Date().getTime();
+    console.log("******************************get data time: ", end - start, "ms");
 });
 
 
 router.post('/save', (req, res) => {
     const data = req.body;
-
-
     query.iso_code = data.iso_code;
     query.continent = data.continent;
     query.total_cases = data.total_cases;
 
     console.log("router.post: ", query);
-
-    Covid19dataModel.find(query).limit(500)
+    var start = new Date().getTime();
+    Covid19dataModel.find(query).limit(1)
         .then((data) => {
-            console.log('Data: ', data);
+            //console.log('Data: ', data);
             res.json(data);
         })
         .catch((error) => {
-            console.log("error!!!!!!!!!!!");
+            console.log("posting error!!!!!!!!!!!");
         });
+    var end = new Date().getTime();
+    console.log("******************************post data time: ", end - start, "ms");
 
     // const data = req.body;
 
