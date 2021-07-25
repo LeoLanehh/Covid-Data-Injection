@@ -17,7 +17,6 @@ class nosqlinjection extends React.Component {
         // iso_code: { "$ne": "AFG" },
         // continent: { "$ne": "Asia" },
         // total_cases: { "$gte": 100, "$lte": 1000 },
-        // total_cases: { "$where": 'sleep(1000) || trun' },
 
         // 3. find iso_code = "SWZ", continent = "Africa", total_cases <= 5000
         // iso_code: "SWZ",

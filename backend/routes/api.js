@@ -11,8 +11,7 @@ var query = {};
 router.get('/', (req, res) => {
     console.log("router.get: ", query);
     var start = new Date().getTime();
-    Covid19dataModel.find(query)
-        .limit(1000)
+    Covid19dataModel.find(query).limit(1000)
         .then((data) => {
             //console.log('Data: ', data);
             res.json(data);
