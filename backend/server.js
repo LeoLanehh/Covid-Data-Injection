@@ -37,6 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //Prevent nosql injection 
+/*Express 4.x middleware which sanitizes user-supplied data to prevent MongoDB Operator Injection */
 //app.use(mongoSanitize());
 
 
